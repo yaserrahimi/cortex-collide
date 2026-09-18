@@ -1,335 +1,329 @@
-# ⚡ Cortex Collide: تالار مناظره و تقابل فکری مدل‌های هوش مصنوعی (ChatGPT ⮂ Gemini ⮂ Claude)
+# ⚡ Cortex Collide: Zero-API Multi-Model Discussion & Deep Deliberation Arena
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Chrome-Manifest_V3-success.svg)](manifest.json)
-[![Supported Models](https://img.shields.io/badge/مدل‌ها-ChatGPT%20%7C%20Gemini%20%7C%20Claude-8a2be2.svg)](#)
-[![Languages](https://img.shields.io/badge/زبان‌ها-۸%20زبان%20جهانی-orange.svg)](i18n/translations.js)
+[![Supported Models](https://img.shields.io/badge/Models-ChatGPT%20%7C%20Gemini%20%7C%20Claude-8a2be2.svg)](#)
+[![Languages](https://img.shields.io/badge/Languages-8%20Locales-orange.svg)](i18n/translations.js)
 
-> افزونه پیشرفته گوگل کروم (Manifest V3) برای مباحثه و هم‌اندیشی چندمدلی بدون واسطه (Zero-API)؛ تالار مناظره دیالکتیک و تقابل فکری چت‌بات‌ها برای کشف حقیقت و تحلیل عمیق موضوعات.
+> Advanced Google Chrome Extension (Manifest V3) for orchestrating zero-API multi-model debates and deep deliberation between top AI models (ChatGPT, Google Gemini, Claude) in a sleek real-time arena.
 
-[English Documentation](README.en.md) | [مستندات فارسی](README.md) | [راهنمای مشارکت (Contributing)](CONTRIBUTING.md)
-
----
-
-## 📋 فهرست مطالب
-- [معرفی پروژه](#-معرفی-پروژه)
-- [پیش‌نمایش محیط برنامه](#-پیشنمایش-محیط-برنامه)
-- [ویژگی‌های شاخص](#-ویژگیهای-شاخص)
-- [معماری و نحوه کارکرد](#-معماری-و-نحوه-کارکرد)
-- [پیش‌نیازها](#-پیشنیازها)
-- [راهنمای نصب گام‌به‌گام](#-راهنمای-نصب-گامبهگام)
-- [راهنمای استفاده](#-راهنمای-استفاده)
-- [امکانات تالار گفتگو (Debate Arena)](#-امکانات-تالار-گفتگو-debate-arena)
-- [ساختار فایل‌های پروژه](#-ساختار-فایلهای-پروژه)
-- [جزییات فنی و نوآوری‌ها](#-جزییات-فنی-و-نوآوریها)
-- [چندزبانه بودن (i18n)](#-چندزبانه-بودن-i18n)
-- [مشارکت و توسعه چت‌بات‌های جدید](#-مشارکت-و-توسعه-چتباتهای-جدید)
-- [عیب‌یابی و پرسش‌های متداول](#-عیبیابی-و-پرسشهای-متداول)
+[English Documentation](README.md) | [مستندات فارسی (Persian)](README.fa.md) | [Contributing](CONTRIBUTING.md)
 
 ---
 
-## 🎯 معرفی پروژه
-
-پروژه **Cortex Collide** یک افزونه مدرن برای مرورگر کروم بر پایه **Manifest V3** است که به کاربر اجازه می‌دهد ذهن‌های مصنوعی برتر جهان یعنی **ChatGPT** (`chatgpt.com`)، **Google Gemini** (`gemini.google.com`) و **Claude** (`claude.ai`) را در یک مباحثه عمیق علمی، فلسفی، فنی یا چالشی رودرروی یکدیگر قرار دهد. معماری پلاگینی افزونه به شما اجازه می‌دهد مدل‌های جدید را فقط با افزودن یک فایل آداپتور اضافه کنید.
-
-افزونه بدون نیاز به کلید API پولی، با باز کردن دو یا سه تب معمولی در مرورگر و از طریق تبادل پیام خودکار، پاسخ یک مدل را خوانده و با زمینه‌سازی هوشمند به مدل دیگر تحویل می‌دهد. تمامی این مکالمات در یک صفحه مستقل با طراحی فوق‌العاده مدرن، تفکیک حباب‌های گفتگو، رندرینگ کامل مارک‌داون و جداول، و پشتیبانی از مداخله لحظه‌ای کاربر نمایش داده می‌شود.
+## 📋 Table of Contents
+- [Introduction](#-introduction)
+- [Preview](#-preview)
+- [Key Features](#-key-features)
+- [Architecture & Workflow](#-architecture--workflow)
+- [Prerequisites](#-prerequisites)
+- [Step-by-Step Installation](#-step-by-step-installation)
+- [User Guide](#-user-guide)
+- [Debate Arena Features](#-debate-arena-features)
+- [Project File Structure](#-project-file-structure)
+- [Technical Innovations](#-technical-innovations)
+- [Internationalization (i18n)](#-internationalization-i18n)
+- [Contributing](#-contributing)
+- [Troubleshooting & FAQ](#-troubleshooting--faq)
 
 ---
 
-## 📸 پیش‌نمایش محیط برنامه
+## 🎯 Introduction
+
+**Cortex Collide** is a cutting-edge Chrome extension built on **Manifest V3** that creates a dialectic clash of minds between world-class AI models—**ChatGPT** (`chatgpt.com`), **Google Gemini** (`gemini.google.com`), and **Claude** (`claude.ai`)—for truth discovery, rigorous debate, and profound collaborative deliberation. Its modular adapter architecture enables adding new AI models simply by creating an adapter file.
+
+Without requiring paid API keys, the extension works directly through regular web browser tabs using automated message orchestration. It captures the response from one model, contextually reframes it for debate, and feeds it to the opposing model. The entire exchange is visualized in a standalone full-screen tab featuring a sleek glassmorphic layout, responsive bubble alignment, rich GFM Markdown rendering with tables, and real-time user intervention capabilities.
+
+---
+
+## 📸 Preview
 
 <div align="center">
-  <img src="assets/screenshots/arena_preview.png" alt="پیش‌نمایش تالار مناظره Cortex Collide" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-  <p><em>تالار مناظره زنده Cortex Collide: تقابل فکری و سنتز ایده‌ها بین ChatGPT، Gemini و Claude</em></p>
+  <img src="assets/screenshots/arena_preview.png" alt="Cortex Collide Arena Preview" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <p><em>Cortex Collide Arena: Real-time multi-model deliberation between ChatGPT, Google Gemini, and Claude</em></p>
 </div>
 
 ---
 
-## ✨ ویژگی‌های شاخص
+## ✨ Key Features
 
-1. **مدیریت کاملاً خودکار نوبت‌ها (Multi-Turn Orchestration):**
-   - ارسال موضوع اولیه به مدل شروع‌کننده (انتخابی: Gemini یا ChatGPT).
-   - تشخیص ۱۰۰٪ پایان پاسخ‌دهی و انتقال بلافاصله پاسخ به مدل مقابل با ادبیات متناسب مناظره.
-   - تکرار حلقه گفتگو تا سقف نوبت تعیین‌شده (قابل تنظیم از ۲ تا ۵۰ نوبت) یا توقف توسط کاربر.
+1. **Fully Automated Multi-Turn Orchestration:**
+   - Dispatches initial prompt to the selected starting model (Gemini, ChatGPT, or Claude).
+   - Reliably detects streaming completion without false-positives and immediately relays the argument to the counterpart model with debate framing.
+   - Loops continuously up to the user-defined turn limit (configurable from 2 to 50 turns) or until paused/stopped.
 
-2. **تالار اختصاصی مناظره (Debate Arena Messenger):**
-   - محیط تمام‌صفحه و اختصاصی شبیه پیام‌رسان‌ها با تم تیره شیشه‌ای (Glassmorphism).
-   - تفکیک پویای حباب‌های گفتگو به صورت راست و چپ بر اساس اینکه چه کسی بحث را آغاز کرده است.
-   - آیکون‌ها و نشان‌های رسمی اختصاصی هر مدل (ستاره رنگین‌کمانی جمنای و گل سرخ‌وش چت‌جی‌پی‌تی).
+2. **Dedicated Debate Arena (Messenger UI):**
+   - Full-screen standalone messenger interface with dark glassmorphism styling.
+   - Dynamic bubble alignment: the debate starter appears on one side while the respondent appears on the opposite side.
+   - Official logos and badges for each model (Gemini sparkle, ChatGPT emerald badge, Claude amber emblem).
 
-3. **رندرینگ پیشرفته مارک‌داون و جداول (GFM Markdown):**
-   - استخراج پاسخ مدل‌ها با حفظ کامل ساختار DOM و تبدیل به استاندارد GFM Markdown.
-   - رندر جداول با قابلیت اسکرول افقی، رنگ‌بندی راه‌راه (Zebra Striping)، حاشیه‌ها و استایل هماهنگ تا جداول مقایسه‌ای طولانی به هیچ وجه به هم نریزند.
-   - بلوک‌های کد با برچسب زبان برنامه‌نویسی و دکمه اختصاصی «کپی کد» با بازخورد تصویری («کپی شد!»).
-   - رندر خودکار هدینگ‌ها (`H1-H4`)، نقل‌قول‌ها (`blockquote`)، لیست‌ها و متون فارسی و انگلیسی با جهت‌گیری هوشمند (`dir="auto"`).
+3. **Advanced Markdown & Table Rendering (GFM):**
+   - Live DOM-to-Markdown extraction preserving full structural hierarchy (lists, tables, code blocks, bold/italic, blockquotes).
+   - Horizontal-scrolling comparison tables with alternating row zebra-striping, subtle borders, and consistent formatting.
+   - Fenced code blocks with language detection and a one-click "Copy Code" button with visual feedback.
+   - Intelligent text direction (`dir="auto"`) handling both RTL (Persian/Arabic) and LTR (English) within the same message.
 
-4. **باکس ورودی هوشمند با رشد خودکار (Auto-Expanding Input):**
-   - حذف کامل متون تستی و آماده‌به‌کار با متن راهنما (`placeholder`).
-   - بزرگ‌شدن خودکار ارتفاع باکس با نوشتن یا پیست کردن متن تا **۷ خط** (`170px`).
-   - فعال‌شدن اسکرول عمودی اختصاصی و ظریف در متون بیش از ۷ خط.
-   - پشتیبانی از میانبر `Enter` برای ارسال و `Shift + Enter` برای ایجاد سطر جدید.
+4. **Smart Auto-Expanding Input Box:**
+   - Clean placeholder text with automatic height growth up to **7 lines** (`170px`).
+   - Smooth custom scrollbar activates automatically for texts exceeding 7 lines.
+   - Standard shortcuts: `Enter` to send / start debate, `Shift + Enter` for multi-line formatting.
 
-5. **قابلیت مداخله کاربر در حین گفتگو (Mode B Interventions):**
-   - امکان تزریق نظر، سوال تکمیلی، اصلاحیه، سند یا تصویر توسط کاربر در هر لحظه از بحث.
-   - ارسال همزمان پیام مداخله به هر دو هوش مصنوعی برای جهت‌دهی به ادامه مناظره.
+5. **Real-Time User Interventions (Mode B):**
+   - Inject your own remarks, clarifying questions, counter-evidence, or uploaded images at any point during an ongoing debate.
+   - Dispatches user interventions simultaneously to both active models to steer the conversation.
 
-6. **ایجاد خودکار چت تمیز و تازه (Clean Chat Reset):**
-   - دکمه **«چت تازه»** در سایدبار و پاپ‌آپ که به صورت خودکار در هر دو سایت چت جدید ایجاد می‌کند تا تاریخچه بحث‌ها با گفتگوهای قبلی شما تداخل پیدا نکند.
+6. **Clean Chat Reset:**
+   - Dedicated **"New Chat"** button in sidebar and popup that starts a clean slate on all connected AI web tabs, preventing cross-session prompt pollution.
 
-7. **پایداری بالا و عدم فریز تب‌ها (Zero Layout Thrashing):**
-   - پایش هوشمند تولید متن با دسترسی مستقیم به طول حافظه بدون تحمیل پردازش رفلوی مرورگر.
-   - قفل تمرکز تب (Focus Lock) تا حین مشاهده گفتگو در صفحه افزونه، فوکوس صفحه کاربر به طور آزاردهنده به تب‌های پشتی نپرد.
+7. **Zero Layout Thrashing & Focus Lock:**
+   - Non-intrusive stream monitoring using length tracking without triggering costly browser reflows.
+   - Focus lock ensures background message exchange never steals focus from your active Debate Arena tab.
 
-8. **ابزارهای تحلیلی و خروجی:**
-   - جستجوی بلادرنگ در پیام‌های گفتگو.
-   - خروجی با یک کلیک به صورت **Markdown کامل**، فایل داده **JSON** و فرمت چاپ / **PDF**.
-   - تغییر اندازه قلم زنده (`A-` و `A+`) با ذخیره‌سازی در حافظه مرورگر.
+8. **Analytical Tools & Multi-Format Export:**
+   - Instant in-chat search across all generated messages.
+   - One-click export to **Full Markdown**, raw **JSON** data, or print-ready **PDF** layout.
+   - Dynamic font-size scaling (`A-` and `A+`) saved to browser storage.
 
-9. **رابط کاربری کاملاً دو زبانه (Bilingual UI):**
-   - پشتیبانی کامل از **انگلیسی (پیش‌فرض)** و **فارسی** در پاپ‌آپ، تالار مناظره و پیام‌های پس‌زمینه.
-   - تعویض زنده زبان با یک کلیک (🌐) و تغییر خودکار جهت صفحه (`rtl` / `ltr`) و قلم بدون نیاز به رفرش.
-   - ترجمه خودکار متن پرامپت‌های ارسالی به مدل‌ها بر اساس زبان انتخابی کاربر.
+9. **Fully Bilingual Interface (i18n):**
+   - Complete support for **English (default)** and **Persian (فارسی)** across the popup, Debate Arena, and service worker.
+   - One-click instant language switch (🌐) with dynamic direction flip (`ltr` ⮂ `rtl`) and typography switching (`Inter` / `Vazirmatn`) without page reloads.
+   - Debate prompt framing templates dynamically adapt to the active UI language.
 
 ---
 
-## 🏗️ معماری و نحوه کارکرد
+## 🏗️ Architecture & Workflow
 
 ```mermaid
 flowchart TD
-    User([کاربر]) -->|تنظیم موضوع و تنظیمات| Arena[صفحه تالار گفتگو viewer.html]
-    User -.->|یا کنترل سریع| Popup[پاپ‌آپ کنترل popup.html]
+    User([User]) -->|Define Topic & Config| Arena[Debate Arena viewer.html]
+    User -.->|Quick Control| Popup[Popup Controller popup.html]
     
-    Arena -->|ارسال پیام START_DEBATE| BG[سرویس ورکر background/ ES Modules]
-    Popup -->|مکث / ادامه / توقف / چت تازه| BG
+    Arena -->|START_DEBATE message| BG[Service Worker background/ ES Modules]
+    Popup -->|Pause / Resume / Stop / Reset| BG
     
     subgraph Browser Tabs
-        GeminiTab[تب Google Gemini]
-        ChatGPTTab[تب ChatGPT]
-        ClaudeTab[تب Claude]
+        GeminiTab[Google Gemini Tab]
+        ChatGPTTab[ChatGPT Tab]
+        ClaudeTab[Claude Tab]
     end
     
-    BG <-->|تزریق پیام و پایش پایان تولید| CS_Gemini[content/bots/gemini.js]
-    BG <-->|تزریق پیام و پایش پایان تولید| CS_ChatGPT[content/bots/chatgpt.js]
-    BG <-->|تزریق پیام و پایش پایان تولید| CS_Claude[content/bots/claude.js]
+    BG <-->|Inject prompt & monitor stream| CS_Gemini[content/bots/gemini.js]
+    BG <-->|Inject prompt & monitor stream| CS_ChatGPT[content/bots/chatgpt.js]
+    BG <-->|Inject prompt & monitor stream| CS_Claude[content/bots/claude.js]
     
     CS_Gemini <--> GeminiTab
     CS_ChatGPT <--> ChatGPTTab
     CS_Claude <--> ClaudeTab
     
-    CS_Gemini -->|استخراج DOM به مارک‌داون| BG
-    CS_ChatGPT -->|استخراج DOM به مارک‌داون| BG
-    CS_Claude -->|استخراج DOM به مارک‌داون| BG
-    CS_Claude -->|استخراج DOM به مارک‌داون| BG
+    CS_Gemini -->|Extract DOM to Markdown| BG
+    CS_ChatGPT -->|Extract DOM to Markdown| BG
+    CS_Claude -->|Extract DOM to Markdown| BG
     
-    BG -->|ارسال گزارش زنده وضعیت و پیام‌ها| Arena
-    BG -->|همگام‌سازی وضعیت در پاپ‌آپ| Popup
+    BG -->|Broadcast live state & messages| Arena
+    BG -->|Sync status & indicators| Popup
     
-    User -->|مداخله کاربر Mode B| Arena
+    User -->|User Intervention Mode B| Arena
     Arena -->|USER_INTERVENTION| BG
-    BG -->|تزریق همزمان| CS_Gemini
-    BG -->|تزریق همزمان| CS_ChatGPT
+    BG -->|Broadcast intervention| CS_Gemini
+    BG -->|Broadcast intervention| CS_ChatGPT
 ```
 
 ---
 
-## 🔧 پیش‌نیازها
+## 🔧 Prerequisites
 
-1. مرورگر **Google Chrome** یا هر مرورگر بر پایه کرومیوم (Brave, Edge, Opera و ...).
-2. داشتن حساب کاربری فعال و لاگین‌شده در حداقل **دو** مورد از موارد زیر:
+1. **Google Chrome** or any Chromium-based browser (Brave, Edge, Opera, Vivaldi, Arc).
+2. Active and logged-in accounts in at least **two** of the following AI web interfaces:
    - [Google Gemini](https://gemini.google.com)
    - [OpenAI ChatGPT](https://chatgpt.com)
-   - [Claude](https://claude.ai)
+   - [Anthropic Claude](https://claude.ai)
 
 ---
 
-## 🚀 راهنمای نصب گام‌به‌گام
+## 🚀 Step-by-Step Installation
 
-پروژه به صورت یکپارچه (Single Codebase) از تمام مرورگرهای مدرن مبتنی بر Chromium (کروم، بریو، اج) و همچنین **موزیلا فایرفاکس** پشتیبانی می‌کند.
+Cortex Collide uses a single unified codebase supporting all modern Chromium browsers (Chrome, Brave, Edge) as well as **Mozilla Firefox**.
 
-### ۱. نصب در گوگل کروم / اج / بریو (Chromium)
-1. مرورگر را باز کرده و به آدرس `chrome://extensions/` بروید.
-2. از گوشه بالا، گزینه **Developer mode** را فعال کنید.
-3. روی دکمه **Load unpacked** کلیک کنید و پوشه پروژه (یا پوشه `dist/chrome`) را انتخاب نمایید.
-4. افزونه **Cortex Collide** بلافاصله فعال می‌شود.
+### 1. Google Chrome / Edge / Brave (Chromium)
+1. Open your browser and navigate to `chrome://extensions/`.
+2. Enable the **Developer mode** toggle in the top-right corner.
+3. Click **Load unpacked** in the top-left corner.
+4. Select the project directory (or the `dist/chrome` directory).
+5. **Cortex Collide** is immediately active in your toolbar.
 
-### ۲. نصب در موزیلا فایرفاکس (Mozilla Firefox)
-1. مرورگر فایرفاکس را باز کرده و به آدرس `about:debugging#/runtime/this-firefox` بروید.
-2. روی دکمه **Load Temporary Add-on...** کلیک کنید.
-3. فایل `manifest.json` پروژه (یا فایل موجود در `dist/firefox/manifest.json`) را انتخاب نمایید.
-4. افزونه فعال شده و آیکون آن در تولبار فایرفاکس پین می‌شود.
+### 2. Mozilla Firefox
+1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on...**.
+3. Select `manifest.json` from the repository root (or from `dist/firefox/manifest.json`).
+4. Cortex Collide is immediately active in Firefox.
 
-### 📦 بیلد و بسته‌بندی برای انتشار استورها
+### 📦 Multi-Browser Build & Packaging
 
-برای ساخت بسته‌های آماده انتشار و فایل‌های ZIP برای استورهای گوگل و موزیلا:
+Generate clean distribution directories and submission-ready ZIP bundles for Chrome Web Store and Mozilla Add-ons (AMO):
 ```bash
-npm run build           # ساخت بسته‌های کروم و فایرفاکس در پوشه dist/
-npm run build:chrome    # ساخت بسته مخصوص کروم (dist/chrome/ و فایل zip)
-npm run build:firefox   # ساخت بسته مخصوص فایرفاکس با شناسه Gecko (dist/firefox/ و فایل zip)
+npm run build           # Packages both Chrome & Firefox into dist/
+npm run build:chrome    # Builds dist/chrome/ and Chrome ZIP archive
+npm run build:firefox   # Builds dist/firefox/ (with Gecko ID) and Firefox ZIP archive
 ```
 
 ---
 
-## 📖 راهنمای استفاده
+## 📖 User Guide
 
-### مرحله ۱: باز کردن تب‌ها
-در مرورگر خود حداقل دو تب از سایت‌های زیر باز کنید (هر ترکیبی معتبر است):
-- یک تب: [gemini.google.com](https://gemini.google.com) (مطمئن شوید وارد حسابتان شده‌اید).
-- یک تب دیگر: [chatgpt.com](https://chatgpt.com) (مطمئن شوید وارد حسابتان شده‌اید).
-- (اختیاری) تب سوم: [claude.ai](https://claude.ai) (مطمئن شوید وارد حسابتان شده‌اید).
+### Step 1: Open AI Model Tabs
+Open at least two browser tabs for your chosen debate participants:
+- Tab 1: [gemini.google.com](https://gemini.google.com) (ensure you are logged in).
+- Tab 2: [chatgpt.com](https://chatgpt.com) (ensure you are logged in).
+- Tab 3 *(Optional)*: [claude.ai](https://claude.ai) (ensure you are logged in).
 
-### مرحله ۲: ورود به تالار مناظره
-1. روی آیکون افزونه در نوار ابزار کروم کلیک کنید.
-2. چراغ سبز تب‌های متصل (Gemini، ChatGPT و در صورت باز بودن Claude) را در پاپ‌آپ مشاهده خواهید کرد.
-3. روی دکمه بزرگ **«ورود به محیط گفتگو»** کلیک کنید تا تالار مناظره در یک تب تمام‌صفحه و زیبا باز شود.
+### Step 2: Launch Debate Arena
+1. Click the extension icon in your Chrome toolbar.
+2. The popup shows green status pills for detected connected tabs.
+3. Click the **"Enter Debate Arena"** button. The full-screen arena will open in a new tab.
 
-### مرحله ۳: آغاز گفتگو
-1. در باکس پایین صفحه، موضوع، سوال، چالش یا شبهه مورد نظرتان را تایپ کنید.
-2. در صورت تمایل تصویر یا سندی ضمیمه کنید.
-3. مشخص کنید شروع بحث با کدام هوش مصنوعی باشد (Gemini، ChatGPT یا Claude).
-4. تعداد سقف نوبت‌ها (پیش‌فرض: ۸ نوبت) و میزان مکث بین نوبت‌ها را مشخص کنید.
-5. روی دکمه **«شروع مناظره هوشمند»** (یا زدن کلید `Enter`) کلیک کنید.
+### Step 3: Initiate Debate
+1. In the input dock at the bottom of the arena, enter your debate motion, technical question, or case study.
+2. *(Optional)* Attach an image or diagram using the attachment button.
+3. Select which AI model speaks first (Gemini, ChatGPT, or Claude).
+4. Configure maximum turns (default: 8 turns) and cooldown delay between turns.
+5. Click **"Start Debate"** (or press `Enter`).
 
-### مرحله ۴: مشاهده زنده و مداخله
-- بحث آغاز شده و پیام‌ها یکی پس از دیگری در محیط چت ظاهر می‌شوند.
-- در هر زمان می‌توانید با باکس مداخله کاربر، نظر یا سوال اصلاحی خود را ارسال کنید تا مستقیماً به هر دو مدل تزریق شود.
-- از دکمه‌های کنترل بالا یا پایین می‌توانید بحث را **مکث**، **ادامه** یا به طور کامل **متوقف** کنید.
+### Step 4: Live Observation & Intervention
+- The debate begins automatically. Arguments stream in real time and are rendered into formatted bubbles.
+- Use the intervention input at any point to introduce user corrections, referee remarks, or new evidence.
+- Use the controls in the top bar or bottom dock to **Pause**, **Resume**, or **Stop** the debate at will.
 
 ---
 
-## 💬 امکانات تالار گفتگو (Debate Arena)
+## 💬 Debate Arena Features
 
-| قابلیت | توضیح |
+| Feature | Description |
 | :--- | :--- |
-| **سایدبار سوابق (History)** | امکان مشاهده، جستجو و جابجایی بین گفتگوهای ذخیره‌شده پیشین بدون از دست رفتن داده‌ها. |
-| **کلید «+ چت جدید»** | شروع جلسه جدید با ایجاد چت تازه در تمام تب‌های متصل هوش مصنوعی و آماده‌سازی صفحه. |
-| **چینش پویا حباب‌ها** | چینش متقارن بر اساس مدل شروع‌کننده (مدل آغازگر در سمت راست، مدل پاسخ‌دهنده در سمت چپ). |
-| **جداول استاندارد GFM** | نمایش بدون اشکال انواع جدول‌های مقایسه‌ای همراه با اسکرول مستقل. |
-| **کپی تکی و کلی** | دکمه کپی متن هر حباب به صورت مجزا و دکمه «کپی Markdown» برای کل مباحثه در هدر صفحه. |
-| **خروجی JSON و PDF** | استخراج فایل استاندارد JSON برای پردازش‌های بعدی یا نسخه آماده چاپ و PDF. |
-| **تنظیم فونت زنده** | کوچک و بزرگ کردن اندازه قلم متن‌ها با دکمه‌های `A-` و `A+`. |
-| **تغییر زبان زنده (🌐)** | جابجایی آنی میان انگلیسی (پیش‌فرض) و فارسی؛ جهت صفحه، فونت و پرامپت‌های ارسالی به مدل‌ها همگی همگام می‌شوند. |
+| **History Sidebar** | Browse, search, restore, and delete up to 50 previously saved debate sessions without data loss. |
+| **"+ New Chat" Action** | Starts a fresh session and automatically triggers a new chat on all connected bot tabs. |
+| **Dynamic Bubble Alignment** | Starting speaker appears on one side; responding speaker appears on the opposite side. |
+| **GFM Tables** | Clean rendering of comparison tables with zebra striping and independent horizontal scrolling. |
+| **Granular & Global Copy** | Copy button on each individual message bubble, plus a "Copy Markdown" button for the entire debate. |
+| **JSON & PDF Export** | Export raw session data as standard JSON or trigger a print-styled layout optimized for PDF saving. |
+| **Live Font Scaling** | Increase or decrease typography scale on the fly using `A-` and `A+` controls. |
+| **Live Language Switch (🌐)** | Instant toggle between English (default) and Persian; document direction, fonts, and bot prompts adjust automatically. |
 
 ---
 
-## 📁 ساختار فایل‌های پروژه
+## 📁 Project File Structure
 
 ```text
-├── manifest.json            # مانیفست افزونه (نسخه ۳) با دسترسی به تب‌ها و ES Modules
-├── background/              # ماژول‌های Service Worker (ES Modules)
-│   ├── background.js        # نقطه ورود سبک: ثبت Listenerهای پیام و کلید میانبر
-│   ├── bots_registry.js     # رجیستری مرکزی بات‌ها (Gemini، ChatGPT، Claude)
-│   ├── state.js             # مدیریت State، هیدراتاسیون تضمینی و برادکست
-│   ├── storage.js           # مدیریت دیسک و آرشیو ۵۰ جلسه اخیر (CRUD)
-│   ├── tabs.js              # شناسایی خودکار تب‌ها، ریست عمیق و ارسال با حفظ فوکوس
-│   ├── orchestrator.js      # چرخه نوبت‌ها و شمارش معکوس Cooldown سبک
-│   ├── payload.js           # قالب‌بندی پیام مناظره و تزریق مدارک جدید کاربر
-│   ├── i18n.js              # موتور ترجمه سرویس ورکر (EN پیش‌فرض / FA)
-│   └── dispatcher.js        # مسیریاب اکشن‌های ارسالی از کلاینت
-├── content/                 # معماری پلاگینی کانتنت اسکریپت‌ها (Adapter Pattern)
-│   ├── core.js              # کتابخانه DOM: تبدیل مارک‌داون، شبیه‌سازی تایپ و تصاویر
-│   ├── adapter.js           # هسته مرکزی آداپتورها و رصد پایان استریم پاسخ
-│   ├── loader.js            # شناسایی خودکار هاست و فعال‌سازی آداپتور مربوطه
+├── manifest.json            # Extension manifest (MV3) with tab permissions & ES Modules
+├── background/              # Modular Service Worker (ES Modules)
+│   ├── background.js        # Entry point: registers runtime message and command listeners
+│   ├── bots_registry.js     # Central bot registry (Gemini, ChatGPT, Claude)
+│   ├── state.js             # Central state management, hydration, and broadcast
+│   ├── storage.js           # Session persistence, disk quota, and 50-session LRU archive
+│   ├── tabs.js              # Tab detection, deep reset, and background dispatch with focus lock
+│   ├── orchestrator.js      # Turn cycle loop, cooldown countdown, and completion hooks
+│   ├── payload.js           # Debate framing templates and user intervention injection
+│   ├── i18n.js              # Service worker translation helper (EN default / FA)
+│   └── dispatcher.js        # Action router mapping client commands to service routines
+├── content/                 # Content scripts with pluggable Bot Adapter pattern
+│   ├── core.js              # DOM utilities: Markdown conversion, synthetic typing, file drag
+│   ├── adapter.js           # Base bot adapter class with stream completion heuristics
+│   ├── loader.js            # Hostname detection and dynamic adapter initialization
 │   └── bots/
-│       ├── chatgpt.js       # آداپتور اختصاصی ChatGPT
-│       ├── gemini.js        # آداپتور اختصاصی Google Gemini
-│       └── claude.js        # آداپتور اختصاصی Claude.ai
-├── i18n/                    # زیرساخت چندزبانه (EN پیش‌فرض + FA)
-│   ├── translations.js      # کاتالوگ کامل ترجمه‌ها (منبع واحد کلیدها)
-│   └── ui_i18n.js           # اعمال ترجمه، تنظیم RTL/LTR و مدیریت زبان فعال
-├── _locales/                # پیام‌های بومی‌سازی کروم برای نام و توضیح افزونه
-│   ├── en/messages.json     # انگلیسی (default_locale)
-├── popup/                   # پنجره کنترل سریع و پایش پاپ‌آپ (HTML, CSS, JS)
+│       ├── chatgpt.js       # ChatGPT adapter
+│       ├── gemini.js        # Google Gemini adapter
+│       └── claude.js        # Claude.ai adapter
+├── i18n/                    # Bilingual internationalization engine
+│   ├── translations.js      # Single source of truth translation catalog (133 keys EN/FA)
+│   └── ui_i18n.js           # DOM attribute translator, RTL/LTR switcher, and date localizer
+├── _locales/                # Chrome extension metadata localization
+│   ├── en/messages.json     # English (default_locale)
+│   └── fa/messages.json     # Persian
+├── popup/                   # Quick controller popup (HTML, CSS, JS)
 │   ├── popup.html
 │   ├── popup.css
 │   └── popup.js
-├── viewer/                  # تالار مناظره اصلی و ادیتور پویا (HTML, CSS, JS)
+├── viewer/                  # Full-screen Debate Arena (HTML, CSS, JS)
 │   ├── viewer.html
 │   ├── viewer.css
 │   └── viewer.js
 ├── tools/
-│   ├── build.js             # اسکریپت بیلد چندمرورگری کروم و فایرفاکس
-│   ├── validate_i18n.js     # اسکریپت اعتبارسنجی تطابق کلیدهای ترجمه
-│   └── test_i18n.js         # تست عملکردی موتور ترجمه و پرامپت‌ها
-├── icons/                  # پوشه آیکون‌های رسمی برنامه (۱۶، ۴۸، ۱۲۸ و ۲۵۶ پیکسل)
-├── README.md               # راهنمای جامع پروژه
-└── ARCHITECTURE.md         # مستندات فنی و دیاگرام‌های عمیق معماری سیستم
+│   ├── build.js             # Multi-browser build & packaging (Chrome & Firefox)
+│   ├── validate_i18n.js     # Key parity and structure verification script
+│   └── test_i18n.js         # Functional test suite for interpolation & prompts
+├── icons/                  # High-resolution official icons (16, 48, 128, and 256px)
+├── README.md               # English documentation (this file)
+├── README.fa.md            # Persian documentation (مستندات فارسی)
+└── ARCHITECTURE.md         # Detailed architectural design document and sequence diagrams
 ```
 
 ---
 
-## 🔬 جزییات فنی و نوآوری‌ها
+## 🔬 Technical Innovations
 
-### ۱. تبدیل هوشمند DOM به مارک‌داون (`convertDomToMarkdown`)
-هنگامی که جمنای یا چت‌جی‌پی‌تی متنی حاوی جدول یا بلوک کد تولید می‌کنند، در ساختار DOM آنها به المان‌های `<table>` و `<pre>` تبدیل می‌شود. خواندن ساده `innerText` باعث حذف علامت‌های پایپ `|` و به هم ریختگی کامل فرمت در انتقال می‌شد. متد اختصاصی افزونه ساختار زنده DOM را پیمایش کرده و آن را به مارک‌داون کاملاً استاندارد تبدیل می‌کند تا هم مدل مقابل و هم کاربر جدول را تمیز و درست دریافت کنند.
+### 1. Intelligent DOM-to-Markdown Parser (`convertDomToMarkdown`)
+When Gemini or ChatGPT produce rich structured responses containing tables or code blocks, reading `innerText` discards table column boundaries and destroys pipe delimiters `|`. The extension traverses the live DOM tree, translating HTML table headers, cells, and code blocks directly into standard GitHub Flavored Markdown (GFM) before transmitting the argument to the counterpart model.
 
-### ۲. اعتبارسنجی دو مرحله‌ای اتمام پاسخ
-به جای اتکا به تایمرهای حدسی، افزونه از بررسی تغییرات DOM و ظهور نوار ابزار بازخورد نهایی (دکمه‌های کپی و لایک) استفاده می‌کند؛ به محض ظاهر شدن این نوار ابزار، پاسخ ۱۰۰٪ کامل تشخیص داده شده و ارسال می‌شود.
+### 2. Multi-Signal Stream Completion Detection
+Rather than relying on arbitrary sleep timers, each bot adapter monitors multiple indicators: DOM mutation quiescence, absence of stop buttons, and appearance of post-generation action bars (e.g. copy and like buttons). This ensures arguments are captured only when 100% finished.
 
-### ۳. عدم پرش تب کاربر (Focus Lock)
-در نسخه‌های پیشین با هر نوبت پاسخ، مرورگر تب فعال کاربر را جابجا می‌کرد. در این نسخه، تا زمانی که کاربر در تب تالار مناظره حضور دارد، ارسال پیام‌ها در پس‌زمینه بدون سوئیچ مزاحم تب‌ها انجام می‌گیرد.
+### 3. Background Dispatch with Focus Lock
+Early prototypes caused the browser to yank user focus back and forth between active bot tabs on every turn. The current architecture executes injection and response polling silently in the background while keeping the user comfortably focused on the Debate Arena.
 
 ---
 
-## 🌐 چندزبانه بودن (i18n)
+## 🌐 Internationalization (i18n)
 
-افزونه به صورت کامل **چندزبانه** با منوی انتخاب بازشونده (Dropdown) پیاده‌سازی شده است:
+The extension is architected from the ground up for full multilingual support with an interactive glassmorphic dropdown selector:
 
-| مورد | مقدار |
+| Attribute | Specification |
 | :--- | :--- |
-| **زبان پیش‌فرض** | 🇬🇧 **English (`en`)** |
-| **زبان‌های پشتیبانی‌شده** | 🇬🇧 English (`en`)، 🇮🇷 فارسی (`fa`)، 🇸🇦 العربية (`ar`)، 🇪🇸 Español (`es`)، 🇫🇷 Français (`fr`)، 🇩🇪 Deutsch (`de`)، 🇨🇳 简体中文 (`zh`)، 🇷🇺 Русский (`ru`) |
-| **محل کاتالوگ ترجمه** | `i18n/translations.js` (منبع واحد ترجمه‌ها) |
-| **پیام‌های بومی‌سازی کروم** | پوشه‌های `_locales/<lang>/messages.json` |
-| **ذخیره انتخاب کاربر** | کلید `uiLanguage` در `chrome.storage.local` |
+| **Default Language** | 🇬🇧 **English (`en`)** |
+| **Supported Languages** | 🇬🇧 English (`en`), 🇮🇷 Persian (`fa`), 🇸🇦 Arabic (`ar`), 🇪🇸 Spanish (`es`), 🇫🇷 French (`fr`), 🇩🇪 German (`de`), 🇨🇳 Chinese (`zh`), 🇷🇺 Russian (`ru`) |
+| **Translation Catalog** | `i18n/translations.js` (single source of truth) |
+| **Chrome Manifest Locales** | `_locales/<lang>/messages.json` |
+| **User Preference Persistence**| `chrome.storage.local.get('uiLanguage')` |
 
-### چطور کار می‌کند؟
-- **منوی انتخاب بازشونده (Dropdown):** با کلیک روی آیکون 🌐 در پاپ‌آپ یا تالار مناظره، منویی شیشه‌ای باز می‌شود که زبان‌های مختلف را همراه با نام بومی و پرچم نمایش می‌دهد و زبان جاری را با تیک مشخص می‌کند.
-- **رابط کاربری (Popup و Arena):** ماژول `i18n/ui_i18n.js` همه عناصر دارای صفت‌های `data-i18n`، `data-i18n-placeholder`، `data-i18n-title` و `data-i18n-alt` را ترجمه کرده و به صورت خودکار جهت صفحه را تنظیم می‌کند (`fa` و `ar` → `rtl`، سایر زبان‌ها → `ltr`). تاریخ‌ها نیز با `locale` مناسب قالب‌بندی می‌شوند.
-- **سرویس ورکر:** ماژول `background/i18n.js` تمام پیام‌های وضعیت (مثل «در انتظار پاسخ...»)، عنوان سشن‌ها و **متن پرامپت‌های ارسالی به چت‌بات‌ها** را ترجمه می‌کند.
-- **تغییر زبان زنده:** با دکمه 🌐 در پاپ‌آپ یا هدر تالار مناظره، زبان بلافاصله بدون بستن صفحه عوض می‌شود. زبان جدید از طریق اکشن `SET_LANGUAGE` به سرویس ورکر اطلاع داده می‌شود تا پیام‌های بعدی هم با همان زبان تولید شوند.
-- **زبان پرامپت مناظره:** فیلد `framingMode` تعیین می‌کند متن گفتگو که به مدل‌ها تحویل داده می‌شود به چه زبانی باشد: `auto` (پیروی از زبان رابط)، `fa` (اجبار فارسی)، `en` (اجبار انگلیسی) یا `raw` (بدون قاب‌بندی و ارسال متن خام).
+### How It Works
+- **Interactive Dropdown Selector:** Clicking the 🌐 button in the popup or arena opens a modern glassmorphic dropdown displaying all supported languages with their native names, flags, and an active checkmark.
+- **UI Translation (`i18n/ui_i18n.js`):** Scans the DOM for `data-i18n`, `data-i18n-placeholder`, `data-i18n-title`, and `data-i18n-alt` attributes. Dynamically sets document direction (`rtl` for Persian and Arabic, `ltr` for others) and selects appropriate typography without page reloads.
+- **Service Worker (`background/i18n.js`):** Translates dynamic status strings (e.g., "Waiting for response..."), default session titles, and **debate prompt templates** sent to the AI models.
+- **Debate Prompt Framing:** The `framingMode` parameter controls the language of the framing prompt fed to the models: `auto` (matches UI language), `fa` (enforce Persian), `en` (enforce English), or `raw` (pass unfiltered raw response).
 
-### افزودن یک زبان جدید
-1. یک بلاک جدید (مثلاً `de: { ... }`) در `i18n/translations.js` کنار `en` و `fa` اضافه کنید و همه کلیدها را ترجمه کنید.
-2. پوشه `_locales/de/messages.json` را با همان کلیدهای `en` بسازید (نام، توضیح، عنوان و متن میانبر).
-3. در پاپ‌آپ و تالار، دکمه زبان را به حالت چندگزینه‌ای گسترش دهید (تابع `refreshLangToggle` در `popup.js` و `viewer.js`).
-4. برای اعتبارسنجی خودکار، اسکریپت بررسی تطابق کلیدها را اجرا کنید: تمام کلیدهای `en` و `fa` باید یکسان باشند تا هیچ متن ترجمه‌نشده‌ای در صفحه ظاهر نشود.
-
-### ابزارهای اعتبارسنجی
+### Running i18n Verification Tests
 
 ```bash
-node tools/validate_i18n.js   # تطابق کلیدها میان کاتالوگ، HTML، JS و _locales
-node tools/test_i18n.js       # تست عملکردی: درون‌یابی متغیرها، پرامپت مناظره، fallback
+node tools/validate_i18n.js   # Structural parity: catalog, HTML, JS calls, and _locales
+node tools/test_i18n.js       # Functional suite: interpolation, debate prompts, fallback
 ```
 
-اسکریپت اول ساختار را بررسی می‌کند (کلیدهای گمشده، متن فارسی جامانده در HTML، پیام‌های ناهماهنگ `_locales`) و اسکریپت دوم رفتار واقعی موتور ترجمه را می‌سنجد (بدون placeholder ترجمه‌نشده، تفاوت واقعی EN و FA، بازگشت امن به انگلیسی برای زبان ناشناس).
+Both tests must pass with 0 errors before releases.
 
 ---
 
-## 🤝 مشارکت و توسعه چت‌بات‌های جدید
+## 🤝 Contributing
 
-مشارکت در توسعه **Cortex Collide** بسیار ارزشمند است و با آغوش باز پذیرفته می‌شود! شما می‌توانید از راه‌های زیر به پروژه کمک کنید:
-- **افزودن آداپتورهای جدید هوش مصنوعی** (مانند DeepSeek، Grok، Mistral، Perplexity یا مدل‌های دیگر) در ۳ گام ساده (توضیحات کامل در [CONTRIBUTING.md](CONTRIBUTING.md)).
-- **تکمیل یا بهبود ترجمه‌ها** به زبان‌های دیگر در `i18n/translations.js`.
-- **گزارش باگ‌ها، ارائه ایده‌ها و بهبود تجربه کاربری تالار مناظره**.
+Contributions are warmly welcomed! You can contribute by:
+- Adding new AI model adapters (see [CONTRIBUTING.md](CONTRIBUTING.md) for the 3-step guide).
+- Improving translations or adding new languages.
+- Reporting bugs or suggesting new deliberation features.
 
-برای مشاهده جزئیات معماری و راهنمای ساخت Pull Request، لطفاً [راهنمای مشارکت (CONTRIBUTING.md)](CONTRIBUTING.md) را مطالعه نمایید.
+Please check out our [Contributing Guide](CONTRIBUTING.md) for architecture details and pull request guidelines.
 
 ---
 
-## ❓ عیب‌یابی و پرسش‌های متداول
+## ❓ Troubleshooting & FAQ
 
-**سؤال ۱: چرا چراغ اتصال تب‌ها قرمز است؟**  
-پاسخ: مطمئن شوید تب‌های موردنیاز یعنی [gemini.google.com](https://gemini.google.com) و [chatgpt.com](https://chatgpt.com) (و در صورت استفاده [claude.ai](https://claude.ai)) در مرورگر باز بوده و لاگین هستید. سپس در پاپ‌آپ یا تالار روی دکمه بررسی مجدد تب‌ها (🔄) کلیک کنید.
+**Q1: Why is a bot tab status pill red / disconnected?**  
+A: Verify that the corresponding tab ([gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com), or [claude.ai](https://claude.ai)) is currently open in your browser and that you are signed in. Then click the refresh button (🔄) in the popup or sidebar.
 
-**سؤال ۲: آیا این افزونه نیاز به پرداخت هزینه یا کلید API دارد؟**  
-پاسخ: خیر، کاملاً رایگان است و Cortex Collide مستقیماً با حساب‌های کاربری فعال شما در وب‌سایت‌ها (رایگان یا پیشرفته) کار می‌کند و هیچ هزینه‌ای بابت کلیدهای API متحمل نخواهید شد.
+**Q2: Do I need to pay for API keys or OpenAI / Google Cloud credits?**  
+A: No. Cortex Collide works entirely through regular web browser sessions, utilizing your existing free or Plus/Advanced subscriptions with no API costs.
 
-**سؤال ۳: آیا داده‌های گفتگوهای من ذخیره می‌شوند؟**  
-پاسخ: تمام سوابق و پیام‌ها به طور امن و صرفاً داخل مرورگر خود شما (`chrome.storage.local`) ذخیره می‌شوند و به هیچ سرور واسطی ارسال نمی‌گردند.
+**Q3: Where is my debate data stored?**  
+A: All session histories and debate transcripts are stored strictly locally in your browser's `chrome.storage.local`. No telemetry, analytics, or session data is ever transmitted to any external server.
 
 ---
 
 <p align="center">
-  ساخته‌شده با ❤️ برای علاقه‌مندان به هوش مصنوعی و مناظره‌های شناختی
+  Built with ❤️ for AI enthusiasts, researchers, and cognitive debaters.
 </p>
