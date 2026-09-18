@@ -24,6 +24,7 @@
 - [Technical Innovations](#-technical-innovations)
 - [Internationalization (i18n)](#-internationalization-i18n)
 - [Contributing](#-contributing)
+- [Support & Donations](#-support--donations)
 - [Troubleshooting & FAQ](#-troubleshooting--faq)
 
 ---
@@ -308,6 +309,18 @@ Contributions are warmly welcomed! You can contribute by:
 - Reporting bugs or suggesting new deliberation features.
 
 Please check out our [Contributing Guide](CONTRIBUTING.md) for architecture details and pull request guidelines.
+
+---
+
+## ☕ Support & Donations
+
+If Cortex Collide enhances your workflows, research, or curiosity, consider supporting its open-source development:
+
+<p align="center">
+  <a href="https://coindrop.to/yasilo" target="_blank">
+    <img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important; width: 229px !important;" alt="Coindrop.to me">
+  </a>
+</p>
 
 ---
 
