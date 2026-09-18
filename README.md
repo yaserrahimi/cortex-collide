@@ -314,7 +314,9 @@ Please check out our [Contributing Guide](CONTRIBUTING.md) for architecture deta
 
 ## ☕ Support & Donations
 
-If Cortex Collide enhances your workflows, research, or curiosity, consider supporting its open-source development:
+Cortex Collide is completely free and open-source. Due to international payment and banking restrictions, we are currently unable to directly cover the Google Chrome Web Store developer registration fee ($5).
+
+**Your donations directly help us fund the Chrome Web Store developer account so we can officially publish Cortex Collide on Chrome for everyone!**
 
 <p align="center">
   <a href="https://coindrop.to/yasilo" target="_blank">
