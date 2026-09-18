@@ -327,6 +327,10 @@ node tools/test_i18n.js       # تست عملکردی: درون‌یابی مت�
   <a href="https://coindrop.to/yasilo" target="_blank">
     <img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important; width: 229px !important;" alt="Coindrop.to me">
   </a>
+  <br><br>
+  <img src="assets/donation_qr.png" width="160" height="160" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" alt="Coindrop QR Code">
+  <br>
+  <span style="font-size: 12px; color: #888;">اسکن کد QR با گوشی جهت پرداخت سریع</span>
 </p>
 
 ---
