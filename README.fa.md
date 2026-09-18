@@ -40,8 +40,10 @@
 ## 📸 پیش‌نمایش محیط برنامه
 
 <div align="center">
-  <img src="assets/screenshots/arena_preview.png" alt="پیش‌نمایش تالار مناظره Cortex Collide" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-  <p><em>تالار مناظره زنده Cortex Collide: تقابل فکری و سنتز ایده‌ها بین ChatGPT، Gemini و Claude</em></p>
+  <img src="assets/screenshots/arena_preview.png" alt="پیش‌نمایش تالار مناظره Cortex Collide" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 16px;">
+  <br>
+  <img src="assets/screenshots/popup_preview.png" alt="کنترلر پاپ‌آپ Cortex Collide" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <p><em>تالار مناظره زنده و کنترلر پاپ‌آپ Cortex Collide: تقابل فکری و سنتز ایده‌ها بین ChatGPT، Gemini و Claude</em></p>
 </div>
 
 ---

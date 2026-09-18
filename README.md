@@ -40,8 +40,10 @@ Without requiring paid API keys, the extension works directly through regular we
 ## 📸 Preview
 
 <div align="center">
-  <img src="assets/screenshots/arena_preview.png" alt="Cortex Collide Arena Preview" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-  <p><em>Cortex Collide Arena: Real-time multi-model deliberation between ChatGPT, Google Gemini, and Claude</em></p>
+  <img src="assets/screenshots/arena_preview.png" alt="Cortex Collide Arena Preview" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 16px;">
+  <br>
+  <img src="assets/screenshots/popup_preview.png" alt="Cortex Collide Controller Popup" width="850" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <p><em>Cortex Collide: Real-time multi-model deliberation arena and controller popup</em></p>
 </div>
 
 ---
