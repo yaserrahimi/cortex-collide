@@ -238,9 +238,14 @@ npm run build:firefox   # ساخت بسته مخصوص فایرفاکس با ش�
 │   └── ui_i18n.js           # اعمال ترجمه، تنظیم RTL/LTR و مدیریت زبان فعال
 ├── _locales/                # پیام‌های بومی‌سازی کروم برای نام و توضیح افزونه
 │   ├── en/messages.json     # انگلیسی (default_locale)
-│   └── fa/messages.json     # فارسی
-├── popup.html / css / js    # رابط کاربری کنترل سریع و پایش پاپ‌آپ
-├── viewer.html / css / js   # تالار مناظره اصلی: رندرر Markdown، ادیتور پویا و سایدبار
+├── popup/                   # پنجره کنترل سریع و پایش پاپ‌آپ (HTML, CSS, JS)
+│   ├── popup.html
+│   ├── popup.css
+│   └── popup.js
+├── viewer/                  # تالار مناظره اصلی و ادیتور پویا (HTML, CSS, JS)
+│   ├── viewer.html
+│   ├── viewer.css
+│   └── viewer.js
 ├── tools/
 │   ├── build.js             # اسکریپت بیلد چندمرورگری کروم و فایرفاکس
 │   ├── validate_i18n.js     # اسکریپت اعتبارسنجی تطابق کلیدهای ترجمه

@@ -238,8 +238,14 @@ Open at least two browser tabs for your chosen debate participants:
 ├── _locales/                # Chrome extension metadata localization
 │   ├── en/messages.json     # English (default_locale)
 │   └── fa/messages.json     # Persian
-├── popup.html / css / js    # Quick controller popup with status pills & language switcher
-├── viewer.html / css / js   # Full-screen Debate Arena: Markdown engine, dock editor, sidebar
+├── popup/                   # Quick controller popup (HTML, CSS, JS)
+│   ├── popup.html
+│   ├── popup.css
+│   └── popup.js
+├── viewer/                  # Full-screen Debate Arena (HTML, CSS, JS)
+│   ├── viewer.html
+│   ├── viewer.css
+│   └── viewer.js
 ├── tools/
 │   ├── build.js             # Multi-browser build & packaging (Chrome & Firefox)
 │   ├── validate_i18n.js     # Key parity and structure verification script
