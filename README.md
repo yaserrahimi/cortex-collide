@@ -278,7 +278,7 @@ The extension is architected from the ground up for full multilingual support wi
 | Attribute | Specification |
 | :--- | :--- |
 | **Default Language** | 🇬🇧 **English (`en`)** |
-| **Supported Languages** | 🇬🇧 English (`en`), 🇮🇷 Persian (`fa`), 🇸🇦 Arabic (`ar`), 🇪🇸 Spanish (`es`), 🇫🇷 French (`fr`), 🇩🇪 German (`de`), 🇨🇳 Chinese (`zh`), 🇷🇺 Russian (`ru`) |
+| **Supported Languages** | 🇬🇧 English (`en`), 🇮🇷 Persian (`fa`), 🇾🇪 Arabic (`ar`), 🇪🇸 Spanish (`es`), 🇫🇷 French (`fr`), 🇩🇪 German (`de`), 🇨🇳 Chinese (`zh`), 🇷🇺 Russian (`ru`) |
 | **Translation Catalog** | `i18n/translations.js` (single source of truth) |
 | **Chrome Manifest Locales** | `_locales/<lang>/messages.json` |
 | **User Preference Persistence**| `chrome.storage.local.get('uiLanguage')` |
