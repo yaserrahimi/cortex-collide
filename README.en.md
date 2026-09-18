@@ -240,9 +240,10 @@ Open at least two browser tabs for your chosen debate participants:
 │   └── fa/messages.json     # Persian
 ├── popup.html / css / js    # Quick controller popup with status pills & language switcher
 ├── viewer.html / css / js   # Full-screen Debate Arena: Markdown engine, dock editor, sidebar
-├── tools/validate_i18n.js  # Key parity and structure verification script (EN/FA)
-├── tools/test_i18n.js      # Functional test suite for interpolation, prompts, and fallback
-├── generate_icons.js       # Extension icon generation utility
+├── tools/
+│   ├── build.js             # Multi-browser build & packaging (Chrome & Firefox)
+│   ├── validate_i18n.js     # Key parity and structure verification script
+│   └── test_i18n.js         # Functional test suite for interpolation & prompts
 ├── icons/                  # High-resolution official icons (16, 48, 128, and 256px)
 ├── README.md               # Persian documentation (مستندات فارسی)
 ├── README.en.md            # English documentation (this file)
